@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Contact Me</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Projects</a></li>
+							<li><a href="generic.html">About Me</a></li>
+							<li class="active"><a href="elements.html">Contact Me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/share/1A89JpNH82/?mibextid=wwXIfr" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/garboole.a" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/garboole" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">2025</span>
+									<h1>I'm Open<br />
+									To Work</h1>
+									<p>I’m always open to exciting opportunities in data science, machine learning, 
+										and software development. Whether you have a project, collaboration idea, 
+										or just want to connect, feel free to reach out anytime. Let’s create 
+										something impactful together!</p>
+								</header>
+								<div class="image main"><img src="images/contact_me.jpg" alt="" /></div>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<form method="POST" action="https://formspree.io/f/xkgoblrq" id="footerForm">
+							<div class="fields">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" required />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" required />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="3" required></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+					</section>
+				<script>
+					document.getElementById("footerForm").addEventListener("submit", function(event) {
+						event.preventDefault(); // Prevents default form submission
+						const form = event.target;
+						const formData = new FormData(form);
+				
+						fetch(form.action, {
+							method: "POST",
+							body: formData,
+							headers: {
+								'Accept': 'application/json'
+							}
+						}).then(response => {
+							if (response.ok) {
+								alert("Message sent successfully!");
+								form.reset(); // Clear the form after submission
+							} else {
+								alert("Oops! Something went wrong.");
+							}
+						}).catch(error => {
+							alert("Error sending message.");
+						});
+					});
+				</script>				
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Jalan Tun Razak, Bandar Alor Setar<br />
+									05200 Alor Setar, Kedah</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">+60 17 4491890</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">garboole.abdillahi@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Garboole</li><li><a>2025</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
